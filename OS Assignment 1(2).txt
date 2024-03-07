@@ -1,0 +1,336 @@
+yash_chimade@TUF:~/LinuxAssignment$ touch data.txt
+yash_chimade@TUF:~/LinuxAssignment$ cat > data.txt
+1y
+2a
+3s
+4h
+5c
+6h
+7i
+8m
+9a
+10d
+11e
+
+^C
+yash_chimade@TUF:~/LinuxAssignment$ cat data.txt
+1y
+2a
+3s
+4h
+5c
+6h
+7i
+8m
+9a
+10d
+11e
+
+yash_chimade@TUF:~/LinuxAssignment$ head -n 10 data.txt
+1y
+2a
+3s
+4h
+5c
+6h
+7i
+8m
+9a
+10d
+yash_chimade@TUF:~/LinuxAssignment$ head 10 data.txt
+head: cannot open '10' for reading: No such file or directory
+==> data.txt <==
+1y
+2a
+3s
+4h
+5c
+6h
+7i
+8m
+9a
+10d
+yash_chimade@TUF:~/LinuxAssignment$ cat > data.txt
+11G
+12o
+13v
+14i
+15n
+16d
+^C
+yash_chimade@TUF:~/LinuxAssignment$ cat data.txt
+11G
+12o
+13v
+14i
+15n
+16d
+yash_chimade@TUF:~/LinuxAssignment$ cat > data.txt
+1Y
+2a
+3s
+4h
+5G
+6o
+7i
+8n
+9g
+10t
+11o
+12p
+13u
+14n
+15e
+^C
+yash_chimade@TUF:~/LinuxAssignment$ cat data.txt
+1Y
+2a
+3s
+4h
+5G
+6o
+7i
+8n
+9g
+10t
+11o
+12p
+13u
+14n
+15e
+yash_chimade@TUF:~/LinuxAssignment$ head -n 10 data.txt
+1Y
+2a
+3s
+4h
+5G
+6o
+7i
+8n
+9g
+10t
+yash_chimade@TUF:~/LinuxAssignment$ head -15 data.txt
+1Y
+2a
+3s
+4h
+5G
+6o
+7i
+8n
+9g
+10t
+11o
+12p
+13u
+14n
+15e
+yash_chimade@TUF:~/LinuxAssignment$ tail -5 data.txt
+11o
+12p
+13u
+14n
+15e
+yash_chimade@TUF:~/LinuxAssignment$ tail -n 5 data.txt
+11o
+12p
+13u
+14n
+15e
+yash_chimade@TUF:~/LinuxAssignment$ head 15 data.txt
+head: cannot open '15' for reading: No such file or directory
+==> data.txt <==
+1Y
+2a
+3s
+4h
+5G
+6o
+7i
+8n
+9g
+10t
+yash_chimade@TUF:~/LinuxAssignment$ head -15 data.txt
+1Y
+2a
+3s
+4h
+5G
+6o
+7i
+8n
+9g
+10t
+11o
+12p
+13u
+14n
+15e
+yash_chimade@TUF:~/LinuxAssignment$ head -15 numbers.txt
+head: cannot open 'numbers.txt' for reading: No such file or directory
+yash_chimade@TUF:~/LinuxAssignment$ touch numbers.txt
+yash_chimade@TUF:~/LinuxAssignment$ cat > numbers.txt
+1q
+2q
+3q
+4q
+5q
+6y
+7u
+8i
+9o
+10o
+11q
+12w
+13e
+14r
+15t
+16y
+17u
+18k
+19l
+20a
+21s
+22d
+23f
+24h
+25n
+^C
+yash_chimade@TUF:~/LinuxAssignment$ head -15 numbers.txt
+1q
+2q
+3q
+4q
+5q
+6y
+7u
+8i
+9o
+10o
+11q
+12w
+13e
+14r
+15t
+yash_chimade@TUF:~/LinuxAssignment$ tail -3 numbers.txt
+23f
+24h
+25n
+yash_chimade@TUF:~/LinuxAssignment$ cat > input.txt
+^C
+yash_chimade@TUF:~/LinuxAssignment$ tr 'a-z' 'A-Z' < input.txt > output.txt
+yash_chimade@TUF:~/LinuxAssignment$ ls
+data.txt  docs.zip  docs1.zip  input.txt    output.txt
+docs      docs1     file1.txt  numbers.txt
+yash_chimade@TUF:~/LinuxAssignment$ cat output.txt
+yash_chimade@TUF:~/LinuxAssignment$ cat duplicate.txt
+cat: duplicate.txt: No such file or directory
+yash_chimade@TUF:~/LinuxAssignment$ duplicate.txt
+duplicate.txt: command not found
+yash_chimade@TUF:~/LinuxAssignment$ cat > duplicate.txt
+aaaaaa
+aaaa
+aaaaaa
+aaaaaa
+ddddddddd
+ffffff
+hhhh
+jjjjjjjjjjjjjj
+vvvvvvvvv
+bbbbbbbb
+^Z
+[1]+  Stopped                 cat > duplicate.txt
+yash_chimade@TUF:~/LinuxAssignment$ cat >> duplicate.txt
+ee
+rr
+tt
+yy
+AA
+DD
+FF
+GG
+QQ
+TT^C
+yash_chimade@TUF:~/LinuxAssignment$ uniq duplicate.txt
+aaaaaa
+aaaa
+aaaaaa
+ddddddddd
+ffffff
+hhhh
+jjjjjjjjjjjjjj
+vvvvvvvvv
+bbbbbbbb
+ee
+rr
+tt
+yy
+AA
+DD
+FF
+GG
+QQ
+yash_chimade@TUF:~/LinuxAssignment$ uniq -u duplicate.txt
+aaaaaa
+aaaa
+ddddddddd
+ffffff
+hhhh
+jjjjjjjjjjjjjj
+vvvvvvvvv
+bbbbbbbb
+ee
+rr
+tt
+yy
+AA
+DD
+FF
+GG
+QQ
+yash_chimade@TUF:~/LinuxAssignment$ sort duplicate.txt | uniq
+AA
+DD
+FF
+GG
+QQ
+aaaa
+aaaaaa
+bbbbbbbb
+ddddddddd
+ee
+ffffff
+hhhh
+jjjjjjjjjjjjjj
+rr
+tt
+vvvvvvvvv
+yy
+yash_chimade@TUF:~/LinuxAssignment$ cat > fruit.txt
+apple
+banana
+mango
+muskmelon
+watermelon
+jamun
+guava
+kiwi
+grapes
+papaya
+pineapple
+oranges
+^C
+yash_chimade@TUF:~/LinuxAssignment$ sort fruit.txt | uniq -c
+      1 apple
+      1 banana
+      1 grapes
+      1 guava
+      1 jamun
+      1 kiwi
+      1 mango
+      1 muskmelon
+      1 oranges
+      1 papaya
+      1 pineapple
+      1 watermelon
+yash_chimade@TUF:~/LinuxAssignment$

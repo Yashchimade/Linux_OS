@@ -1,0 +1,306 @@
+yash_chimade@TUF:~$ pwd
+/home/yash_chimade
+yash_chimade@TUF:~$ cd
+yash_chimade@TUF:~$ ls
+LinuxAssignment  Technology  family_tree  snap  user1  user2
+yash_chimade@TUF:~$ cd LinuxAssignment
+yash_chimade@TUF:~/LinuxAssignment$ touch file1.txt
+yash_chimade@TUF:~/LinuxAssignment$ cat > file1.txt
+This is Yash Chimade!!!
+^C
+yash_chimade@TUF:~/LinuxAssignment$ cat file1.txt
+This is Yash Chimade!!!
+yash_chimade@TUF:~/LinuxAssignment$ ls
+file1.txt
+yash_chimade@TUF:~/LinuxAssignment$ mkdir docs
+yash_chimade@TUF:~/LinuxAssignment$ ls
+docs  file1.txt
+yash_chimade@TUF:~/LinuxAssignment$ cp file1.txt docs/file2.txt
+yash_chimade@TUF:~/LinuxAssignment$ ls
+docs  file1.txt
+yash_chimade@TUF:~/LinuxAssignment$ cd docs
+yash_chimade@TUF:~/LinuxAssignment/docs$ ls
+file2.txt
+yash_chimade@TUF:~/LinuxAssignment/docs$ cat file2.txt
+This is Yash Chimade!!!
+yash_chimade@TUF:~/LinuxAssignment/docs$ cd ..
+yash_chimade@TUF:~/LinuxAssignment$ catfile1.txt
+catfile1.txt: command not found
+yash_chimade@TUF:~/LinuxAssignment$ cat file1.txt
+This is Yash Chimade!!!
+yash_chimade@TUF:~/LinuxAssignment$ chmod 744 file2.txt
+chmod: cannot access 'file2.txt': No such file or directory
+yash_chimade@TUF:~/LinuxAssignment$ cd docs
+yash_chimade@TUF:~/LinuxAssignment/docs$ chmod 744 file2.txt
+yash_chimade@TUF:~/LinuxAssignment/docs$ cd ..
+yash_chimade@TUF:~/LinuxAssignment$ ls
+docs  file1.txt
+yash_chimade@TUF:~/LinuxAssignment$ ls /
+Technology  dev          home  lib32   lost+found  opt   run   srv  usr
+bin         etc          init  lib64   media       proc  sbin  sys  var
+boot        family_tree  lib   libx32  mnt         root  snap  tmp  yash
+yash_chimade@TUF:~/LinuxAssignment$ find . -name "*.txt"
+./file1.txt
+./docs/file2.txt
+yash_chimade@TUF:~/LinuxAssignment$ grep "Yash" file1.txt
+This is Yash Chimade!!!
+yash_chimade@TUF:~/LinuxAssignment$ date
+Thu Mar  7 23:42:54 IST 2024
+yash_chimade@TUF:~$ ip add
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:b6:12:c5 brd ff:ff:ff:ff:ff:ff
+    inet 172.22.160.95/20 brd 172.22.175.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:feb6:12c5/64 scope link
+       valid_lft forever preferred_lft forever
+yash_chimade@TUF:~$ ipconfig
+Command 'ipconfig' not found, did you mean:
+  command 'iconfig' from deb ipmiutil (3.1.8-1)
+  command 'iwconfig' from deb wireless-tools (30~pre9-13.1ubuntu4)
+  command 'ifconfig' from deb net-tools (1.60+git20181103.0eebece-1ubuntu5)
+Try: sudo apt install <deb name>
+yash_chimade@TUF:~$ ifconfig
+Command 'ifconfig' not found, but can be installed with:
+sudo apt install net-tools
+yash_chimade@TUF:~$ sudo apt install net-tools
+[sudo] password for yash_chimade:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  net-tools
+0 upgraded, 1 newly installed, 0 to remove and 79 not upgraded.
+Need to get 204 kB of archives.
+After this operation, 819 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 net-tools amd64 1.60+git20181103.0eebece-1ubuntu5 [204 kB]
+Fetched 204 kB in 1s (219 kB/s)
+Selecting previously unselected package net-tools.
+(Reading database ... 24216 files and directories currently installed.)
+Preparing to unpack .../net-tools_1.60+git20181103.0eebece-1ubuntu5_am
+d64.deb ...
+Unpacking net-tools (1.60+git20181103.0eebece-1ubuntu5) ...
+Setting up net-tools (1.60+git20181103.0eebece-1ubuntu5) ...
+yash_chimade@TUF:~$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.22.160.95  netmask 255.255.240.0  broadcast 172.22.175.255
+        inet6 fe80::215:5dff:feb6:12c5  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:b6:12:c5  txqueuelen 1000  (Ethernet)
+        RX packets 15127  bytes 53376067 (53.3 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2519  bytes 277034 (277.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+yash_chimade@TUF:~/LinuxAssignment$ ping 127.0.0.1
+PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.018 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.055 ms
+64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.043 ms
+64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.016 ms
+64 bytes from 127.0.0.1: icmp_seq=5 ttl=64 time=0.041 ms
+64 bytes from 127.0.0.1: icmp_seq=6 ttl=64 time=0.046 ms
+64 bytes from 127.0.0.1: icmp_seq=7 ttl=64 time=0.045 ms
+64 bytes from 127.0.0.1: icmp_seq=8 ttl=64 time=0.047 ms
+64 bytes from 127.0.0.1: icmp_seq=9 ttl=64 time=0.046 ms
+64 bytes from 127.0.0.1: icmp_seq=10 ttl=64 time=0.044 ms
+64 bytes from 127.0.0.1: icmp_seq=11 ttl=64 time=0.043 ms
+64 bytes from 127.0.0.1: icmp_seq=12 ttl=64 time=0.046 ms
+64 bytes from 127.0.0.1: icmp_seq=13 ttl=64 time=0.050 ms
+64 bytes from 127.0.0.1: icmp_seq=14 ttl=64 time=0.042 ms
+64 bytes from 127.0.0.1: icmp_seq=15 ttl=64 time=0.046 ms
+64 bytes from 127.0.0.1: icmp_seq=16 ttl=64 time=0.045 ms
+^C
+--- 127.0.0.1 ping statistics ---
+16 packets transmitted, 16 received, 0% packet loss, time 15623ms
+rtt min/avg/max/mdev = 0.016/0.042/0.055/0.010 ms
+yash_chimade@TUF:~/LinuxAssignment$ zip docs.zip docs
+Command 'zip' not found, but can be installed with:
+sudo apt install zip
+yash_chimade@TUF:~/LinuxAssignment$ sudo apt install zip
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  unzip
+The following NEW packages will be installed:
+  unzip zip
+0 upgraded, 2 newly installed, 0 to remove and 79 not upgraded.
+Need to get 350 kB of archives.
+After this operation, 930 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 unzip amd64 6.0-26ubuntu3.2 [175 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 zip amd64 3.0-12build2 [176 kB]
+Fetched 350 kB in 1s (285 kB/s)
+Selecting previously unselected package unzip.
+(Reading database ... 24265 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-26ubuntu3.2_amd64.deb ...
+Unpacking unzip (6.0-26ubuntu3.2) ...
+Selecting previously unselected package zip.
+Preparing to unpack .../zip_3.0-12build2_amd64.deb ...
+Unpacking zip (3.0-12build2) ...
+Setting up unzip (6.0-26ubuntu3.2) ...
+Setting up zip (3.0-12build2) ...
+Processing triggers for man-db (2.10.2-1) ...
+yash_chimade@TUF:~/LinuxAssignment$ zip docs.zip docs
+  adding: docs/ (stored 0%)
+yash_chimade@TUF:~/LinuxAssignment$ ls
+docs  docs.zip  file1.txt
+yash_chimade@TUF:~/LinuxAssignment$ cd ..
+yash_chimade@TUF:~$ mkdir newdir
+yash_chimade@TUF:~$ ls
+LinuxAssignment  Technology  family_tree  newdir  snap  user1  user2
+yash_chimade@TUF:~$ cd LinuxAssignment
+yash_chimade@TUF:~/LinuxAssignment$ rm -r newdir
+rm: cannot remove 'newdir': No such file or directory
+yash_chimade@TUF:~/LinuxAssignment$ cd ..
+yash_chimade@TUF:~$ rm -r newdir
+yash_chimade@TUF:~$ ls
+LinuxAssignment  Technology  family_tree  snap  user1  user2
+yash_chimade@TUF:~$ cd LinuxAssignment
+yash_chimade@TUF:~/LinuxAssignment$ mkdir newdir
+yash_chimade@TUF:~/LinuxAssignment$ ls
+docs  docs.zip  file1.txt  newdir
+yash_chimade@TUF:~/LinuxAssignment$ unnzip docs.zip -d newdire
+Command 'unnzip' not found, did you mean:
+  command 'unzzip' from deb zziplib-bin (0.13.72+dfsg.1-1.1)
+  command 'unzip' from deb unzip (6.0-26ubuntu3.1)
+Try: sudo apt install <deb name>
+yash_chimade@TUF:~/LinuxAssignment$ sudo apt install
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 79 not upgraded.
+yash_chimade@TUF:~/LinuxAssignment$ unzip docs.zip -d newdir
+Archive:  docs.zip
+   creating: newdir/docs/
+yash_chimade@TUF:~/LinuxAssignment$ rm -r docs.zip
+yash_chimade@TUF:~/LinuxAssignment$ ls
+docs  file1.txt  newdir
+yash_chimade@TUF:~/LinuxAssignment$ zip docs1.zip docs
+  adding: docs/ (stored 0%)
+yash_chimade@TUF:~/LinuxAssignment$ ls
+docs  docs1.zip  file1.txt  newdir
+yash_chimade@TUF:~/LinuxAssignment$ unzip docs1.zip -d newdir
+Archive:  docs1.zip
+yash_chimade@TUF:~/LinuxAssignment$ tree
+.
+├── docs
+│   └── file2.txt
+├── docs1.zip
+├── file1.txt
+└── newdir
+    └── docs
+
+3 directories, 3 files
+yash_chimade@TUF:~/LinuxAssignment$ cd newdir
+yash_chimade@TUF:~/LinuxAssignment/newdir$ cd docs
+yash_chimade@TUF:~/LinuxAssignment/newdir/docs$ ls
+yash_chimade@TUF:~/LinuxAssignment/newdir/docs$ cd ..
+yash_chimade@TUF:~/LinuxAssignment/newdir$ cd ..
+yash_chimade@TUF:~/LinuxAssignment$ grep -l
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+yash_chimade@TUF:~/LinuxAssignment$ grep -l Yash
+^C
+yash_chimade@TUF:~/LinuxAssignment$ grep -l Yash file2.txt
+grep: file2.txt: No such file or directory
+yash_chimade@TUF:~/LinuxAssignment$ grep Yash file2.txt
+grep: file2.txt: No such file or directory
+yash_chimade@TUF:~/LinuxAssignment$ cd docs
+yash_chimade@TUF:~/LinuxAssignment/docs$ grep Yash file2.txt
+This is Yash Chimade!!!
+yash_chimade@TUF:~/LinuxAssignment/docs$ cd ..
+yash_chimade@TUF:~/LinuxAssignment$ hostname
+TUF
+yash_chimade@TUF:~/LinuxAssignment$ zip -r docs.zip docs
+  adding: docs/ (stored 0%)
+  adding: docs/file2.txt (stored 0%)
+yash_chimade@TUF:~/LinuxAssignment$ ls
+docs  docs.zip  docs1.zip  file1.txt  newdir
+yash_chimade@TUF:~/LinuxAssignment$ rm -r docs1.zip
+yash_chimade@TUF:~/LinuxAssignment$ ls
+docs  docs.zip  file1.txt  newdir
+yash_chimade@TUF:~/LinuxAssignment$ unzip -z docs.zip docs1
+Archive:  docs.zip
+yash_chimade@TUF:~/LinuxAssignment$ ls
+docs  docs.zip  file1.txt  newdir
+yash_chimade@TUF:~/LinuxAssignment$ zip -r docs1.zip docs
+  adding: docs/ (stored 0%)
+  adding: docs/file2.txt (stored 0%)
+yash_chimade@TUF:~/LinuxAssignment$ unzip docs.zip -d docs1
+Archive:  docs.zip
+   creating: docs1/docs/
+ extracting: docs1/docs/file2.txt
+yash_chimade@TUF:~/LinuxAssignment$ tree
+.
+├── docs
+│   └── file2.txt
+├── docs.zip
+├── docs1
+│   └── docs
+│       └── file2.txt
+├── docs1.zip
+├── file1.txt
+└── newdir
+    └── docs
+
+5 directories, 5 files
+yash_chimade@TUF:~/LinuxAssignment$ rm -r newdir
+yash_chimade@TUF:~/LinuxAssignment$ tree
+.
+├── docs
+│   └── file2.txt
+├── docs.zip
+├── docs1
+│   └── docs
+│       └── file2.txt
+├── docs1.zip
+└── file1.txt
+
+3 directories, 5 files
+yash_chimade@TUF:~/LinuxAssignment$ cd docs
+yash_chimade@TUF:~/LinuxAssignment/docs$ ls
+file2.txt
+yash_chimade@TUF:~/LinuxAssignment/docs$ vi file2.txt
+yash_chimade@TUF:~/LinuxAssignment/docs$ cd ..
+yash_chimade@TUF:~/LinuxAssignment$ ls
+docs  docs.zip  docs1  docs1.zip  file1.txt
+yash_chimade@TUF:~/LinuxAssignment$ vi file1.txt
+yash_chimade@TUF:~/LinuxAssignment$ cat file1.txt
+This is Yash Chimade!!!
+yash_chimade@TUF:~/LinuxAssignment$ vi file1.txt
+yash_chimade@TUF:~/LinuxAssignment$ cat file1.txt
+This is Yash Govind_Chimade!!!
+yash_chimade@TUF:~/LinuxAssignment$ sed 's/file/text file/g' fil
+e1.txt
+sed: can't read fil: No such file or directory
+e1.txt: command not found
+yash_chimade@TUF:~/LinuxAssignment$ sed 's/file/text file/g' file1.txt
+This is Yash Govind_Chimade!!!
+yash_chimade@TUF:~/LinuxAssignment$ tree
+.
+├── docs
+│   └── file2.txt
+├── docs.zip
+├── docs1
+│   └── docs
+│       └── file2.txt
+├── docs1.zip
+└── file1.txt
+
+3 directories, 5 files
+yash_chimade@TUF:~/LinuxAssignment$
