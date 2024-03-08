@@ -88,16 +88,16 @@ Unpacking net-tools (1.60+git20181103.0eebece-1ubuntu5) ...
 Setting up net-tools (1.60+git20181103.0eebece-1ubuntu5) ...
 yash_chimade@TUF:~$ ifconfig
 eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 172.22.160.95  netmask 255.255.240.0  broadcast 172.22.175.255
-        inet6 fe80::215:5dff:feb6:12c5  prefixlen 64  scopeid 0x20<link>
-        ether 00:15:5d:b6:12:c5  txqueuelen 1000  (Ethernet)
-        RX packets 15127  bytes 53376067 (53.3 MB)
+        inet 172.00.000.00  netmask 255.222.00.0  broadcast 172.00.000.000
+        inet6 fe80::215:5dff:feb6 prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:b6:12  txqueuelen 1000  (Ethernet)
+        RX packets 1512  bytes 53376 (53.3 MB)
         RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 2519  bytes 277034 (277.0 KB)
+        TX packets 259  bytes 27703 (277.0 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
+        inet 127.0.0.1  netmask 255.0.1
         inet6 ::1  prefixlen 128  scopeid 0x10<host>
         loop  txqueuelen 1000  (Local Loopback)
         RX packets 0  bytes 0 (0.0 B)
